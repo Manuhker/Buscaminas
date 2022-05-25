@@ -5,18 +5,19 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
+    android:backgroundTint="@color/teal_200"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btnReiniciar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#4CAF50"
+        android:backgroundTint="#03A9F4"
         android:onClick="reiniciar"
         android:text="reiniciar"
         android:textAlignment="center"
         android:textColor="#0E0E0E"
-        android:textSize="20sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

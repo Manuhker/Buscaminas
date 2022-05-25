@@ -89,29 +89,37 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             super(context);
         }
         protected void onDraw(Canvas canvas){
-            canvas.drawRGB(0, 0, 0);
+            //color de fondo del jugo
+            canvas.drawRGB(204,255 , 255);
             int ancho = 0;
             if (canvas.getWidth() < canvas.getHeight())
                 ancho = fondo.getWidth();
             else
                 ancho = fondo.getHeight();
+            //8 indica en cuantas partes estara dividido el tablero
             int Ancho= ancho / 8;
             Paint paint = new Paint();
-            paint.setTextSize(20);
+            paint.setTextSize(30);
             Paint paint2 = new Paint();
-            paint2.setTextSize(20);
+            paint2.setTextSize(30);
             paint2.setTypeface(Typeface.DEFAULT_BOLD);
+            //color de los numero de las casillas
             paint2.setARGB(255, 0, 0, 255);
             Paint paintlinea1 = new Paint();
-            paintlinea1.setARGB(255, 255, 255, 255);
+            //color de las liineas
+            paintlinea1.setARGB(102, 0, 204, 204);
             int filaact = 0;
             for (int i = 0; i < 8; i++) {
                 for (int c = 0; c < 8; c++) {
                     casillas[i][c].fijarxy(c * Ancho, filaact, Ancho);
                     if (casillas[i][c].desocupada == false)
-                        paint.setARGB(153, 204, 204, 204);
+                        //fondo de la cuadricula
+                        paint.setARGB(202, 17, 140, 204);
+
                     else
+                        //relleno de las casillas ocupadas
                         paint.setARGB(255, 153, 153, 153);
+
                     canvas.drawRect(c * Ancho, filaact, c * Ancho
                             + Ancho - 2, filaact + Ancho - 2, paint);
 
@@ -132,6 +140,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     if (casillas[i][c].contenido == 80
                             && casillas[i][c].desocupada) {
                         Paint bomba = new Paint();
+                        //color de la bomba
                         bomba.setARGB(255, 255, 0, 0);
                         canvas.drawCircle(c * Ancho + (Ancho / 2),
                                 filaact + (Ancho / 2), 8, bomba);
