@@ -1,4 +1,6 @@
 # Buscaminas
 Martinez Olmos Lucero
 Matricula:1319104675
-Manuel Alvarez Noh
+------------------------------
+Carlos Manuel Alvarez Noh
+Matrícula: 1319104641
